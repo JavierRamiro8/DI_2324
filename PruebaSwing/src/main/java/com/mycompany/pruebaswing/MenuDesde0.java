@@ -5,7 +5,6 @@
 package com.mycompany.pruebaswing;
 
 import java.awt.Color;
-import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -15,13 +14,10 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
-import javax.swing.JRadioButtonMenuItem;
-import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableColumn;
 
 /**
  *
@@ -37,13 +33,10 @@ public class MenuDesde0 {
         JCheckBox check2=new JCheckBox("Chocolate");
         JCheckBox check3=new JCheckBox("Vainilla");
         
-        JRadioButtonMenuItem radioGroup=new JRadioButtonMenuItem();
+        
         JRadioButton bt1= new JRadioButton("Diesel");
         JRadioButton bt2= new JRadioButton("Gasolina");
         JRadioButton bt3= new JRadioButton("Electrico");
-        radioGroup.add(bt1);
-        radioGroup.add(bt2);
-        radioGroup.add(bt3);
         
         ButtonGroup radioGrupo=new ButtonGroup();
         radioGrupo.add(bt1);
@@ -61,7 +54,6 @@ public class MenuDesde0 {
        JTable tabla1=new JTable(modeloTabla);
        
         JPanel panel=new JPanel();
-        
         panel.add(txt1);
         panel.add(tf1);
         panel.add(botonCambiarFondo);
@@ -82,6 +74,7 @@ public class MenuDesde0 {
         frame.setResizable(true);
         frame.setSize(500,500);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setTitle("Hola que tal");
          
         lista.addActionListener((e) -> {
          String listaSeleccionada=lista.getSelectedItem().toString();
